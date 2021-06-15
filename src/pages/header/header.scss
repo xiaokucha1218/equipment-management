@@ -1,0 +1,21 @@
+@import '../../style/variable.scss';
+@import '../../style/mixin.scss';
+#header-container{
+    min-height: 40px;
+    padding: $common-wd;
+    background-color: $base-color;
+    @include flexSpaceAround;
+    header{
+        font-weight: bold;
+        color: $color-white;
+        font-size: $text-size-h2;
+    }
+    .return-wrap{
+        margin-left: $common-wd;
+        .return{
+            color: $color-white;
+            font-weight: bold;
+            font-weight: $text-size-h1;
+        }
+    }
+}

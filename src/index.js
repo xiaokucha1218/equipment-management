@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './style/iconfont.css';
 import './style/global.scss';
 
 ReactDOM.render(

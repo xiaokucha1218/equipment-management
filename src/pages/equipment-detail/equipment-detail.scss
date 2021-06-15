@@ -1,0 +1,25 @@
+@import '../../style/variable.scss';
+@import '../../style/mixin.scss';
+#equipment-detail{
+    background-color: $color-white;
+    .detail-img{
+        height: 170px;
+        overflow: hidden;
+        .logo{
+            width: 100%;
+            height: auto;
+            transform: translateY(-21%);
+        }
+    }
+    .content-wrap{
+       @include flexHeader;
+        .content-left{
+            color: $color-gray;
+            @include flexColumn1;
+        }
+        .content-right{
+            color: $base-color;
+            @include flexColumn3
+        }
+    }
+}

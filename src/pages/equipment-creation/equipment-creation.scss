@@ -1,0 +1,28 @@
+@import '../../style/mixin.scss';
+#equipment-creation{
+    position: relative;
+    .input-wrap{
+        @include flexHeader;
+         label{
+             color: $color-gray;
+             @include flexColumn1;
+         }
+         .input-value{
+             color: $base-color;
+             @include flexColumn3
+         }
+         input{
+             height: 25px;
+         }
+     }
+     .btn-wrap{
+         .submit-btn{
+            @include btnStyle;
+            background-color: $color-green;
+            margin-left: $common-wd;
+         }
+     }
+     .message{
+       @include message;
+     }
+}

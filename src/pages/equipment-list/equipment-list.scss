@@ -1,11 +1,78 @@
 @import '../../style/variable.scss';
-#euqipment-container{
-    .equipment-list{
+@import '../../style/mixin.scss';
 
+#euqipment-container{
+    position: relative;
+    .delete-success-message{
+        @include message;
+    }
+    .confirm-message{
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        top: 40%;
+        width: 70%;
+        padding: $common-min-wd;
+        background-color: $color-white;
+        border:1px solid $base-color;
+        .comfirm{
+            @include btnStyle;
+            background-color: $base-color;
+        }
+        .cancel{
+            @include btnStyle;
+            border:1px solid $base-color;
+            background-color: $color-white;
+            color: $base-color;
+        }
+        p{
+            text-align: center;
+            color: $base-color;
+            font-weight: bold;
+            font-size: $text-size-h3;
+            margin-bottom: $common-wd;
+        }
+        .btn-wrap{
+            @include flexSpaceAround;
+        }
+    }
+    .iconfont{
+        font-size: 22px;
+    }
+    .iconfont.delete{
+        color: $color-orange;
+    }
+    .iconfont.add{
+        color: $color-green;
+    }
+    .iconfont.detail{
+        color: $base-color;
     }
     .equipemnt-item{
+        display: flex;
+        justify-content: space-between;
         min-height: 90px;
         padding: $common-wd;
-        border-bottom: 1PX solid #eee;
+        color: $text-color;
+        border-top: 1px solid rgba($color: $base-color, $alpha: 0.2);
+        font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+        .equipment-model{
+            color: $base-color;
+            font-weight: bold;
+        }
+        .equipment-left{
+            flex: 3;
+        }
+        .equipment-right{
+            flex: 1;
+            flex-direction: column;
+        }
+        .equipment-model{
+            padding-right: $common-min-wd;
+            padding-bottom: $common-min-wd;
+        }
+    }
+    .hide{
+        display: 'none';
     }
 }
